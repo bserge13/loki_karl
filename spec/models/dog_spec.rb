@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Dog, type: :model do 
-    xdescribe 'relationships' do 
-        
+    describe 'relationships' do 
+        it { should have_many :families }
+        it { should have_many(:cats).through(:families) }
     end
 
     describe 'validations' do 
