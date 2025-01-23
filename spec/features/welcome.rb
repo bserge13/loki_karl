@@ -12,5 +12,11 @@ RSpec.describe 'Features', type: :feature do
             expect(page).to have_link('Dogs')
             expect(page).to have_link('Cats')
         end
+
+        it 'redirects to a dog or cat index page' do 
+            visit '/'
+            click_link('Dogs')
+            expect(current_path).to eq('/dogs')
+        end
     end
 end
