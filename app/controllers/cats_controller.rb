@@ -4,6 +4,6 @@ class CatsController < ApplicationController
     end
 
     def show
-        require 'pry'; binding.pry
+        @cat = Cat.find(params[:id])
     end
 end
