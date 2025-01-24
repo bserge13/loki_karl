@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Cats Features', type: :feature do 
-    describe 'Cats page' do 
+    describe 'Cats index page' do 
         it 'has an index page of cats and their attrs' do
             @karl = Cat.create!(name: 'Karl', age: 1, color: 'Grey')
             @cowboy = Cat.create!(name: 'Cowboy', age: 1, color: 'Grey')
