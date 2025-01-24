@@ -10,11 +10,14 @@ RSpec.describe 'Cats Features', type: :feature do
 
         it 'has an index page with cats' do
             visit '/cats'
+            
             within "#cats-#{@karl.id}" do
                 expect(page).to have_content("Name: #{@karl.name}")
                 expect(page).to have_content("Age: #{@karl.age}")
                 expect(page).to have_content("Coat: #{@karl.color}")
             end
+            
+            expect(page).to have_link(@cowboy.name)
         end
     end
 end

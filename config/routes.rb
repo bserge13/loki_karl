@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   # cats
   get '/cats', to: 'cats#index'
+  get '/cats/:id', to: 'cats#show'
 end
