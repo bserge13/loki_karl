@@ -1,1 +1,5 @@
 <h1>Welcome to <%=@cat.name%>'s Show Page!</h1>
+
+<br> See our other four-legged sibblings
+<br><%=@cat.name%>'s Dogs
+<br><%= link_to "#{@cat.name}'s Dogs", "/families/#{@cat.id}"%>
