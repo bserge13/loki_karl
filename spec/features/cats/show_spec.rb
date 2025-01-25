@@ -17,6 +17,9 @@ RSpec.describe 'Cats Features', type: :feature do
 
             expect(page).to have_content('See our other four-legged sibblings')
             expect(page).to have_link("#{@karl.name}'s Dogs")
+            
+            click_link("#{@karl.name}'s Dogs")
+            expect(current_path).to eq("/families/#{@karl.id}")
         end
     end
 end
