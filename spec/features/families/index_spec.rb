@@ -23,7 +23,7 @@ RSpec.describe 'Families Features', type: :feature do
             expect(page).to have_content(@heidi.name)
         end
 
-        xit 'has an index of a dogs associated cats' do
+        it 'has an index of a dogs associated cats' do
             visit "/dogs/#{@loki.id}"
 
         end

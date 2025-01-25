@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   # dogs
   get '/dogs', to: 'dogs#index'
+  get '/dogs/:id', to: 'dogs#show'
 
   # cats
   get '/cats', to: 'cats#index'
