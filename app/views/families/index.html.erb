@@ -1,5 +1,9 @@
 <h1> <%= @pet.name %>'s Family </h1>
 
 <% @family.each do |sibling| %>
-    <li> <%= sibling.name %>
+    <% if sibling.class == Dog %>
+        <li> <%= link_to "#{sibling.name}", "/dogs/#{sibling.id}" %></li>
+    <% elsif sibling.class == Cat %>
+        <li> <%= link_to "#{sibling.name}", "/cats/#{sibling.id}" %></li>
+    <% end %>
 <% end %>

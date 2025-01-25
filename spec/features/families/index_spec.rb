@@ -25,9 +25,9 @@ RSpec.describe 'Families Features', type: :feature do
             click_link("#{@karl.name}'s Dogs")
 
             expect(page).to have_content("#{@karl.name}'s Family")
-            expect(page).to have_content(@loki.name)
-            expect(page).to have_content(@nova.name)
-            expect(page).to have_content(@heidi.name)
+            expect(page).to have_link(@loki.name)
+            expect(page).to have_link(@nova.name)
+            expect(page).to have_link(@heidi.name)
         end
 
         it 'has an index of a dogs associated cats' do
@@ -35,9 +35,9 @@ RSpec.describe 'Families Features', type: :feature do
             click_link("#{@loki.name}'s Cats")
 
             expect(page).to have_content("#{@loki.name}'s Family")
-            expect(page).to have_content(@karl.name)
-            expect(page).to have_content(@cowboy.name)
-            expect(page).to have_content(@bexley.name)
+            expect(page).to have_link(@karl.name)
+            expect(page).to have_link(@cowboy.name)
+            expect(page).to have_link(@bexley.name)
 
         end
     end
