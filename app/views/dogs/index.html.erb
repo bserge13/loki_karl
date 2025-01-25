@@ -1,1 +1,8 @@
 <h1>Dogs Page!</h1>
+
+<% @dogs.each do |dog| %>
+    <section id=<%= "dogs-#{dog.id}"%>>
+        <li>Name: <%= link_to "#{dog.name}", "/dogs/#{dog.id}" %></li>
+        <li>Age: <%= dog.age %></li>
+        <li>Coat: <%= dog.color %></li>
+<% end %>
