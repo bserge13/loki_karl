@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Cats Features', type: :feature do 
     describe 'Cats show page' do 
         it 'has a cats show page' do
-            @karl = Cat.create!(name: 'Karl', age: 1, color: 'Grey')
+            @karl = Cat.create!(name: 'Karl', age: 1, color: 'Brown')
             visit '/cats'
 
             click_link(@karl.name)
