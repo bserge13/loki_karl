@@ -12,12 +12,12 @@ RSpec.describe 'Families Features', type: :feature do
             Family.create!(dog_id: @nova.id, cat_id: @karl.id)
             Family.create!(dog_id: @heidi.id, cat_id: @karl.id)
         end
-        
+
         it 'has an index of a cats associated dogs' do
             visit "/cats/#{@karl.id}"
             click_link("#{@karl.name}'s Dogs")
 
-            expect(page).to have_content("#{@karl}'s Family")
+            expect(page).to have_content("#{@karl.name}'s Family")
             expect(page).to have_content(@loki.name)
             expect(page).to have_content(@nova.name)
             expect(page).to have_content(@heidi.name)

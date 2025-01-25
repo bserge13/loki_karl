@@ -14,4 +14,10 @@ Rails.application.routes.draw do
   # cats
   get '/cats', to: 'cats#index'
   get '/cats/:id', to: 'cats#show'
+
+  # cat_families
+  get '/families/cats/:cat_id', to: 'families#index'
+
+  # dog_families
+  get '/families/dogs/:dog_id', to: 'families#index'
 end
