@@ -7,7 +7,7 @@ RSpec.describe 'Dogs Features', type: :feature do
             @nova = Dog.create!(name: 'Nova', age: 8, color: 'Yellow')
             @heidi = Dog.create!(name: 'Heidi', age: 10, color: 'White')
 
-            visit '/dogs'
+            visit dogs_path
 
             within "#dogs-#{@loki.id}" do
                 expect(page).to have_content("Name: #{@loki.name}")
