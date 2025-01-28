@@ -4,7 +4,7 @@ RSpec.describe 'Cats Features', type: :feature do
     describe 'Cats show page' do 
         it 'has a cats show page' do
             @karl = Cat.create!(name: 'Karl', age: 1, color: 'Brown')
-            visit '/cats'
+            visit cats_path
 
             click_link(@karl.name)
             expect(current_path).to eq("/cats/#{@karl.id}")
@@ -13,7 +13,7 @@ RSpec.describe 'Cats Features', type: :feature do
 
         it 'has a link to see dogs associated with a cat' do
             @karl = Cat.create!(name: 'Karl', age: 1, color: 'Grey')
-            visit "/cats/#{@karl.id}"
+            visit cat_path(@karl.id)
 
             expect(page).to have_content('See our other four-legged sibblings')
             expect(page).to have_link("#{@karl.name}'s Dogs")
