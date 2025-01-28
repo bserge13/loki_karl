@@ -9,16 +9,18 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
 
   # dogs
-  get '/dogs', to: 'dogs#index'
-  get '/dogs/:id', to: 'dogs#show'
+  # get '/dogs', to: 'dogs#index'
+  # get '/dogs/:id', to: 'dogs#show'
+  resources :dogs, only: [:index, :show]
 
   # cats
-  get '/cats', to: 'cats#index'
-  get '/cats/:id', to: 'cats#show'
+  # get '/cats', to: 'cats#index'
+  # get '/cats/:id', to: 'cats#show'
+  resources :cats, only: [:index, :show]
 
   # cat_families
-  get '/families/cats/:cat_id', to: 'families#index'
+  get '/families/cats/:cat_id', to: 'families#index', as: 'families_cats'
 
   # dog_families
-  get '/families/dogs/:dog_id', to: 'families#index'
+  get '/families/dogs/:dog_id', to: 'families#index', as: 'families_dogs'
 end

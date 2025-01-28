@@ -21,7 +21,7 @@ RSpec.describe 'Families Features', type: :feature do
         end
 
         it 'has an index of a cats associated dogs' do
-            visit "/cats/#{@karl.id}"
+            visit cat_path(@karl.id)
             click_link("#{@karl.name}'s Dogs")
 
             expect(page).to have_content("#{@karl.name}'s Family")
@@ -31,7 +31,7 @@ RSpec.describe 'Families Features', type: :feature do
         end
 
         it 'has an index of a dogs associated cats' do
-            visit "/dogs/#{@loki.id}"
+            visit dog_path(@loki.id)
             click_link("#{@loki.name}'s Cats")
 
             expect(page).to have_content("#{@loki.name}'s Family")
