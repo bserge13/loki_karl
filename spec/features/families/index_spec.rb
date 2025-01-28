@@ -41,14 +41,14 @@ RSpec.describe 'Families Features', type: :feature do
         end
 
         it 'reroutes to an animals show page- cat-to-dog' do 
-            visit "/families/cats/#{@karl.id}"
+            visit families_cats_path(@karl.id)
             click_link(@nova.name)
 
             expect(current_path).to eq("/dogs/#{@nova.id}")
         end
 
         it 'reroutes to an animals show page- dog-to-cat' do 
-            visit "/families/dogs/#{@loki.id}"
+            visit families_dogs_path(@loki.id)
             click_link(@bexley.name)
 
             expect(current_path).to eq("/cats/#{@bexley.id}")
