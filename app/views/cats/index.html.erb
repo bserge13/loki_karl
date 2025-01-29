@@ -8,7 +8,7 @@
 <% end %>
 
 <p><h3>Create a new Cat</h3>
-<p><%= form_with model: @cat, url: cats_path, method: :post do |f| %>
+<p><%= form_with model: @cat, url: cats_path, method: :post, data: {turbo:false} do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
 

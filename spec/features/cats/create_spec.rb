@@ -24,8 +24,10 @@ RSpec.describe 'Cats Features', type: :feature do
             fill_in "Color", with: "Grey"
             click_button "Create"
 
-            expect(current_path).to eq(cats_path)
-            expect(page).to have_content("Greyling")
+            new_cat = Cat.last
+            expect(new_cat.name).to eq("Greyling")
+            expect(new_cat.age).to eq(8)
+            expect(new_cat.color).to eq("Grey")
         end
     end
 end
