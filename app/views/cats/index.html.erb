@@ -1,7 +1,7 @@
 <h1>Cats Page!</h1>
 
 <% @cats.each do |cat| %>
-    <section id=<%= "cats-#{cat.id}"%>>
+    <p><section id=<%= "cats-#{cat.id}"%>>
         <li>Name: <%= link_to "#{cat.name}", "/cats/#{cat.id}" %></li>
         <li>Age: <%= cat.age %></li>
         <li>Coat: <%= cat.color %></li>
