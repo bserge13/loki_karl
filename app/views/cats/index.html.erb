@@ -6,3 +6,17 @@
         <li>Age: <%= cat.age %></li>
         <li>Coat: <%= cat.color %></li>
 <% end %>
+
+<p><h3>Create a new Cat</h3>
+<p><%= form_with model: @cat, url: cats_path, method: :post do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+
+    <%= f.submit "Create" %>
+<% end %>
