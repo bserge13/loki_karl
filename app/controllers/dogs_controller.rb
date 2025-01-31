@@ -6,4 +6,15 @@ class DogsController < ApplicationController
     def show
         @dog = Dog.find(params[:id])
     end
+
+    def create
+        Dog.create(dog_params)
+        redirect_to dogs_path
+    end
+
+    private 
+
+    def dog_params
+        params.permit(:id, :name, :age, :color)
+    end
 end

@@ -6,3 +6,17 @@
         <li>Age: <%= dog.age %></li>
         <li>Coat: <%= dog.color %></li>
 <% end %>
+
+<p><h3>Create a new Dog</h3>
+<p><%= form_with model: @dog, url: dogs_path, method: :post, data: {turbo:false} do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+
+    <%= f.submit "Create" %>
+<% end %>
