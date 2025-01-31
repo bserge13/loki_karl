@@ -2,14 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'Cats Features', type: :feature do 
     describe 'Cats create action' do
-        before :each do 
-            @karl = Cat.create!(name: 'Karl', age: 1, color: 'Brown')
-            @cowboy = Cat.create!(name: 'Cowboy', age: 1, color: 'Grey')
-            @bexley = Cat.create!(name: 'Bexley', age: 1, color: 'Brown')
-
-            visit cats_path
-        end
         it 'has form field(s) to create new cats' do
+            visit cats_path 
+            
             expect(page).to have_field("Name")
             expect(page).to have_field("Age")
             expect(page).to have_field("Color")
@@ -17,6 +12,8 @@ RSpec.describe 'Cats Features', type: :feature do
         end
 
         it 'creates new cats' do
+            visit cats_path 
+
             expect(page).to_not have_content("Greyling")
 
             fill_in "Name", with: "Greyling"
