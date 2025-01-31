@@ -5,6 +5,7 @@ RSpec.describe 'Dogs Features', type: :feature do
         it 'has form field(s) to create new dogs' do
             visit dogs_path 
 
+            expect(page).to have_content("Create a new Dog")
             expect(page).to have_field("Name")
             expect(page).to have_field("Age")
             expect(page).to have_field("Color")
