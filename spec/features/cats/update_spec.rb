@@ -9,6 +9,8 @@ RSpec.describe 'Cats Feautres', type: :feature do
 
             within "#cats-#{@logan.id}" do 
                 expect(page).to have_button('Update')
+                click_button('Update')
+                expect(current_path).to eq(edit_cat_path(@logan.id))
             end
         end
     end

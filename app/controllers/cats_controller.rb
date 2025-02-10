@@ -12,6 +12,10 @@ class CatsController < ApplicationController
         redirect_to(cats_path)
     end
 
+    def edit
+        @cat = Cat.find(params[:id])
+    end
+
     private
 
     def cat_params

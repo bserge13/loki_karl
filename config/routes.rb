@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   # cats
   # get '/cats', to: 'cats#index'
   # get '/cats/:id', to: 'cats#show'
-  resources :cats, only: [:index, :show, :create]
+  resources :cats, only: [:index, :show, :create, :edit]
 
   # cat_families
   get '/families/cats/:cat_id', to: 'families#index', as: 'families_cats'
