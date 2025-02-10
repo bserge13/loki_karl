@@ -13,12 +13,12 @@ RSpec.describe Cat, type: :model do
     end
 
     describe 'model methods' do
-        it '#average_age' do
+        it '#average_cat_age' do
             Cat.create!(name: 'Logan', age: 2, color: 'Black')
             Cat.create!(name: 'Chester', age: 5, color: 'Orange')
             Cat.create!(name: 'Karl', age: 2, color: 'Brown')
 
-            expect(Cat.average_age).to eq(3)
+            expect(Cat.average_cat_age).to eq(3)
         end
     end
 end

@@ -13,12 +13,12 @@ RSpec.describe Dog, type: :model do
     end
 
     describe 'model methods' do
-        it '#average_age' do
+        it '#average_dog_age' do
             Dog.create!(name: 'Kevin', age: 2, color: 'Yellow')
             Dog.create!(name: 'Loki', age: 5, color: 'Gray')
             Dog.create!(name: 'Nova', age: 6, color: 'Brown')
 
-            expect(Dog.average_age).to eq(4.33)
+            expect(Dog.average_dog_age).to eq(4.33)
         end
     end
 end

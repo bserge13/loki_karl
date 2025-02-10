@@ -23,8 +23,8 @@ RSpec.describe 'Cats Features', type: :feature do
 
         it 'lists the average age of all the cats listed' do
             expect(page).to have_content("Average age")
-            expect(page).to have_content(Cat.average_age)
-            expect(Cat.average_age).to eq(2.67)
+            expect(page).to have_content(Cat.average_cat_age)
+            expect(Cat.average_cat_age).to eq(2.67)
         end
     end
 end

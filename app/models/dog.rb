@@ -4,7 +4,7 @@ class Dog < ApplicationRecord
     has_many :families
     has_many :cats, through: :families
 
-    def self.average_age
+    def self.average_dog_age
         average(:age).round(2)
     end
 end
