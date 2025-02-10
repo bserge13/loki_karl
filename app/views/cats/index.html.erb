@@ -5,6 +5,7 @@
         <li>Name: <%= link_to "#{cat.name}", "/cats/#{cat.id}" %></li>
         <li>Age: <%= cat.age %></li>
         <li>Coat: <%= cat.color %></li>
+        <p><%= button_to "Update", "/cats/#{cat.id}/edit", method: :get %>
 <% end %>
 
 <p><h3>Create a new Cat</h3>
