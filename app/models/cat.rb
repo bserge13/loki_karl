@@ -5,7 +5,6 @@ class Cat < ApplicationRecord
     has_many :dogs, through: :families
 
     def self.average_age
-        # require 'pry'; binding.pry
         average(:age).round(2)
     end
 end
