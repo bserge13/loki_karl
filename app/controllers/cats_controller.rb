@@ -16,6 +16,11 @@ class CatsController < ApplicationController
         @cat = Cat.find(params[:id])
     end
 
+    def update
+        Cat.find(params[:id]).update(cat_params)
+        redirect_to cats_path
+    end
+
     private
 
     def cat_params
