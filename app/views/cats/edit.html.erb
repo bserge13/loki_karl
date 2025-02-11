@@ -1,0 +1,14 @@
+<h1> Update <%= @cat.name %></h1>
+
+<p><%= form_with model: @cat, url: cats_path, method: :put, data: {turbo:false} do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, value: "#{@cat.name}" %>
+
+    <%= f.label :age %>
+    <%= f.number_field :age, value: "#{@cat.age}" %>
+
+    <%= f.label :color %>
+    <%= f.text_field :color, value: "#{@cat.color}" %>
+
+    <%= f.submit "Update" %>
+<% end %>
