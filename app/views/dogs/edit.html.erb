@@ -1,0 +1,14 @@
+<h1> Update <%= @dog.name %></h1>
+
+<p><%= form_with url: dog_path(@dog.id), method: :patch, local: true do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, value: "#{@dog.name}" %>
+
+    <%= f.label :age %>
+    <%= f.number_field :age, value: "#{@dog.age}" %>
+
+    <%= f.label :color %>
+    <%= f.text_field :color, value: "#{@dog.color}" %>
+
+    <%= f.submit "Update" %>
+<% end %>
