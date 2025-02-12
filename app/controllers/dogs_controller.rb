@@ -12,6 +12,10 @@ class DogsController < ApplicationController
         redirect_to dogs_path
     end
 
+    def edit 
+        @dog = Dog.find(params[:id])
+    end
+
     private 
 
     def dog_params
