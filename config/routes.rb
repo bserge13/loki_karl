@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # dogs
   # get '/dogs', to: 'dogs#index'
   # get '/dogs/:id', to: 'dogs#show'
-  resources :dogs, only: [:index, :show, :create]
+  resources :dogs, only: [:index, :show, :create, :edit, :update]
 
   # cats
   # get '/cats', to: 'cats#index'

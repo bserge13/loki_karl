@@ -5,12 +5,12 @@ RSpec.describe 'Dogs Feautres', type: :feature do
         before :each do 
             @ze = Dog.create!(name: 'Ze', age: 3, color: 'Black')
         end
-        it 'can update an existing cat' do 
+        it 'can update an existing dog' do 
             visit dogs_path
 
             expect(page).to have_button("Update #{@ze.name}")
             click_button("Update #{@ze.name}")
-            expect(current_path).to eq(edit_cat_path(@ze.id))
+            expect(current_path).to eq(edit_dog_path(@ze.id))
         end
 
         it 'has an update page with form fields' do 
@@ -23,7 +23,7 @@ RSpec.describe 'Dogs Feautres', type: :feature do
             expect(page).to have_button('Update')
         end
 
-        it 'can update an existing cats attrs' do 
+        it 'can update an existing dogs attrs' do 
             visit dogs_path
 
             expect(page).to have_content("Age: 3")
