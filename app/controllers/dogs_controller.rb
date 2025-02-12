@@ -17,7 +17,6 @@ class DogsController < ApplicationController
     end
 
     def update
-        # require 'pry'; binding.pry
         Dog.find(params[:id]).update(dog_params)
         redirect_to dogs_path
     end
