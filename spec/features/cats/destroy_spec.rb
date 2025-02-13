@@ -1,23 +1,23 @@
 require 'rails_helper'
 
-RSpec.describe 'Dogs Features', type: :feature do 
-    describe 'Dogs destroy action' do
+RSpec.describe 'Cats Features', type: :feature do 
+    describe 'Cats destroy action' do
         before :each do 
-            @ze = Dog.create!(name: 'Ze', age: 3, color: 'Black')
-            @loki = Dog.create!(name: 'Loki', age: 5, color: 'Blue')
-            @kevin = Dog.create!(name: 'Kevin', age: 2, color: 'Yellow')
+            @karl = Cat.create!(name: 'Karl', age: 2, color: 'Brown')
+            @cowboy = Cat.create!(name: 'Cowboy', age: 1, color: 'Grey')
+            @chester = Cat.create!(name: 'Chester', age: 5, color: 'Orange')
         end
         
-        it 'can delete a dog' do
-            visit dogs_path 
+        it 'can delete a cat' do
+            visit cats_path 
             
-            expect(page).to have_content(@kevin.name )
-            expect(page).to have_button("Delete #{@kevin.name}")
+            expect(page).to have_content(@chester.name )
+            expect(page).to have_button("Delete #{@chester.name}")
 
-            click_button("Delete #{@kevin.name}")
-            expect(current_path).to eq(dog_path(@kevin.id))
+            click_button("Delete #{@chester.name}")
+            expect(current_path).to eq(cat_path(@chester.id))
 
-            expect(page).to_not have_content(@kevin.name)
+            expect(page).to_not have_content(@chester.name)
         end
     end
 end
