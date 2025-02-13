@@ -6,6 +6,7 @@
         <li>Age: <%= dog.age %></li>
         <li>Coat: <%= dog.color %></li>
         <p><%= button_to "Update #{dog.name}", edit_dog_path(dog.id), method: :get %>
+        <p><%= button_to "Delete #{dog.name}", edit_dog_path(dog.id), method: :delete %>
 <% end %>
 
 <p><h3>Create a new Dog</h3>
