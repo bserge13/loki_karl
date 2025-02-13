@@ -18,6 +18,8 @@ RSpec.describe 'Cats Features', type: :feature do
             expect(current_path).to eq(cat_path(@chester.id))
 
             expect(page).to_not have_content(@chester.name)
+            expect(page).to have_content(@karl.name)
+            expect(page).to have_content(@cowboy.name)
         end
     end
 end
