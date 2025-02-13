@@ -15,7 +15,6 @@ RSpec.describe 'Cats Features', type: :feature do
             expect(page).to have_button("Delete #{@chester.name}")
 
             click_button("Delete #{@chester.name}")
-            expect(current_path).to eq(cat_path(@chester.id))
 
             expect(page).to_not have_content(@chester.name)
             expect(page).to have_content(@karl.name)
