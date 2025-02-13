@@ -6,6 +6,7 @@
         <li>Age: <%= cat.age %></li>
         <li>Coat: <%= cat.color %></li>
         <p><%= button_to "Update #{cat.name}", edit_cat_path(cat.id), method: :get %>
+        <p><%= button_to "Delete #{cat.name}", cat_path(cat.id), method: :delete %>
 <% end %>
 
 <p><h3>Create a new Cat</h3>
