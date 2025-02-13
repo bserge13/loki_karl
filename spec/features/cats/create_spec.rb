@@ -23,6 +23,7 @@ RSpec.describe 'Cats Features', type: :feature do
             click_button "Create"
 
             new_cat = Cat.last
+
             expect(new_cat.name).to eq("Greyling")
             expect(new_cat.age).to eq(8)
             expect(new_cat.color).to eq("Grey")

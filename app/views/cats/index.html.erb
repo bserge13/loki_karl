@@ -23,4 +23,8 @@
 <% end %>
 
 <p><h3>Average age</h3>
-<%= @cats.average_cat_age %>
+<% if @cats.empty? %>
+    No cats at this time
+<% else %>
+    <%= Cat.average_cat_age %>
+<% end %>
