@@ -7,14 +7,17 @@ RSpec.describe 'Dogs Features', type: :feature do
             @loki = Dog.create!(name: 'Loki', age: 5, color: 'Blue')
             @kevin = Dog.create!(name: 'Kevin', age: 2, color: 'Yellow')
         end
+        
         it 'can delete a dog' do
             visit dogs_path 
             
-            expect(page).to have_content("Create a new Cat")
-            expect(page).to have_field("Name")
-            expect(page).to have_field("Age")
-            expect(page).to have_field("Color")
-            expect(page).to have_button("Create")
+            expect(page).to have_content(@kevin.name )
+            expect(page).to have_button("Delete #{@kevin.name}")
+
+            click_button("Delete #{@kevin.name}")
+            expect(current_path).to eq(dog_path(@kevin.id))
+
+            expect(page).to_not have_content(@kevin.name)
         end
     end
 end
