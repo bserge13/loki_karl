@@ -26,5 +26,9 @@ RSpec.describe 'Landing Page', type: :feature do
             expect(current_path).to eq(cats_path)
             expect(page).to have_content('Cats Page!')
         end
+
+        it 'redirects to page for creating families' do 
+            
+        end
     end
 end
