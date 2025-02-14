@@ -17,7 +17,7 @@ RSpec.describe 'Landing Page', type: :feature do
 
         it 'redirects to a dog index page' do 
             click_link('Dogs')
-            expect(current_path).to eq('/dogs')
+            expect(current_path).to eq(dogs_path)
             expect(page).to have_content('Dogs Page!')
         end
 
