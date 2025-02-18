@@ -28,7 +28,7 @@ RSpec.describe 'Landing Page', type: :feature do
         end
 
         it 'redirects to page for creating families' do 
-            
+            ...
         end
     end
 end
