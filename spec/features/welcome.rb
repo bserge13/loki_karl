@@ -27,8 +27,9 @@ RSpec.describe 'Landing Page', type: :feature do
             expect(page).to have_content('Cats Page!')
         end
 
-        it 'redirects to page for creating families' do 
-            ...
+        it 'has link and redirects to page for creating families' do 
+            expect(page).to have_link("Create a Pet Family")
+            # need to TDD this test still
         end
     end
 end
