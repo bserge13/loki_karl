@@ -30,6 +30,7 @@ RSpec.describe 'Landing Page', type: :feature do
         it 'has link and redirects to page for creating families' do 
             expect(page).to have_link('Create a Pet Family')
             click_link('Create a Pet Family')
+            expect(current_path).to eq(create_families_path)
         end
     end
 end
