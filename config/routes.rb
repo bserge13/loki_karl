@@ -23,4 +23,7 @@ Rails.application.routes.draw do
 
   # dog_families
   get '/families/dogs/:dog_id', to: 'families#index', as: 'families_dogs'
+
+  # new_familes
+  get '/families/create', to: 'families#create', as: 'create_families'
 end
