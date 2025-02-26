@@ -22,6 +22,8 @@ RSpec.describe 'Create Families', type: :feature do
             # Add all exisiting pets to page, showcasing their name and id's
             # Form fields will be "input the pets ID's into the form fields"
             
+            # Maybe go wtih model methods to filter pets already associated?
+            # Or just showcase existing pet associations?
         end
     end 
 end 
