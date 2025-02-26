@@ -17,9 +17,11 @@ RSpec.describe 'Create Families', type: :feature do
 
             expect(page).to have_content('Create a new Pet Association')
             
-            # Add form field to new page
-            # Add all exisiting pets, broken down by category of animal to be able to choose from 
+            # Add form field to new page to input a cat id and dog id and create association
+
+            # Add all exisiting pets to page, showcasing their name and id's
             # Form fields will be "input the pets ID's into the form fields"
+            
         end
     end 
 end 
