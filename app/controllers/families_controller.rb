@@ -10,6 +10,8 @@ class FamiliesController < ApplicationController
     end
 
     def new 
+        @dogs = Dog.all
+        @cats = Cat.all 
     end
 
     def create 
