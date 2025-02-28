@@ -26,5 +26,5 @@ Rails.application.routes.draw do
 
   # new_familes
   get '/families/new', to: 'families#new', as: 'new_families'
-  # post '/families', to: 'families#create', as: 'create_families'
+  post '/families', to: 'families#create', as: 'create_families'
 end

@@ -34,7 +34,8 @@ RSpec.describe 'Create Families', type: :feature do
 
             expect(page).to have_content(@bexley.name)
             expect(page).to have_content(@bexley.id)
-
+            # save_and_open_page
+            
             # Add form field to new page to input a cat id and dog id and create association
             
             # Maybe go wtih model methods to filter pets already associated?

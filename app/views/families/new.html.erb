@@ -13,11 +13,13 @@
 
 
 <p><h3> Input the ID of the Cat and Dog you want to be related </h3>
-<p><%= form_with url: create_families, method: :post, data: {turbo:false} do |f| %>
+
+<p><%= form_with url: create_families_path, method: :post, data: {turbo:false} do |f| %>
     <%= f.label :cat_id %>
-    <%= f.test_field :cat_id %> 
+    <%= f.text_field :cat_id %> 
 
     <%= f.label :dog_id %>
-    <%= f.test_field :dog_id %> 
+    <%= f.text_field :dog_id %> 
 
     <%= f.submit "Create" %>
+<% end %>
