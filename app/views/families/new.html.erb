@@ -1,5 +1,6 @@
 <h1> Create a new Pet Association </h1>
 
+
 <p> <h2> Dogs </h2>
 <p> <% @dogs.each do |dog| %>
         <li> <%= dog.name %> ID: <%= dog.id %>
@@ -9,3 +10,14 @@
 <p> <% @cats.each do |cat| %>
         <li> <%= cat.name %> ID: <%= cat.id %>
     <% end %>
+
+
+<p><h3> Input the ID of the Cat and Dog you want to be related </h3>
+<p><%= form_with url: create_families, method: :post, data: {turbo:false} do |f| %>
+    <%= f.label :cat_id %>
+    <%= f.test_field :cat_id %> 
+
+    <%= f.label :dog_id %>
+    <%= f.test_field :dog_id %> 
+
+    <%= f.submit "Create" %>
