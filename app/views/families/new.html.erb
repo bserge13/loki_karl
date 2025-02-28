@@ -1,2 +1,11 @@
 <h1> Create a new Pet Association </h1>
 
+<p> <h2> Dogs </h2>
+<p> <% @dogs.each do |dog| %>
+        <li> <%= dog.name %> ID: <%= dog.id %>
+    <% end %>
+
+<p> <h2> Cats </h2>
+<p> <% @cats.each do |cat| %>
+        <li> <%= cat.name %> ID: <%= cat.id %>
+    <% end %>
