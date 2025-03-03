@@ -42,5 +42,9 @@ RSpec.describe 'Create Families', type: :feature do
             # Maybe go wtih model methods to filter pets already associated?
             # Or just showcase existing pet associations?
         end
+
+        it 'creates new family associations' do 
+            
+        end
     end 
 end 
