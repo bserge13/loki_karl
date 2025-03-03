@@ -44,7 +44,14 @@ RSpec.describe 'Create Families', type: :feature do
         end
 
         it 'creates new family associations' do 
-            
+            visit new_families_path
+
+            fill_in "Cat ID", with "#{@bexley.id}"
+            fill_in "Dog ID", with "#{@loki.id}"
+            click_button "Create"
+
+            new_family = Family.last
+            # require 'pry'; binding.pry
         end
     end 
 end 
