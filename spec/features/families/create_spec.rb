@@ -54,7 +54,7 @@ RSpec.describe 'Create Families', type: :feature do
 
             expect(new_family.cat_id).to eq(@bexley.id)
             expect(new_family.dog_id).to eq(@loki.id)
-            # require 'pry'; binding.pry
+            # creation actions passing, but need to lockdown where to redirect
         end
     end 
 end 
