@@ -51,6 +51,9 @@ RSpec.describe 'Create Families', type: :feature do
             click_button "Create"
 
             new_family = Family.last
+
+            expect(new_family.cat_id).to eq(@bexley.id)
+            expect(new_family.dog_id).to eq(@loki.id)
             # require 'pry'; binding.pry
         end
     end 

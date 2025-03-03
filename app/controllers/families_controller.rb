@@ -15,6 +15,14 @@ class FamiliesController < ApplicationController
     end
 
     def create 
-        require 'pry'; binding.pry
+        # require 'pry'; binding.pry
+        Family.create(familiy_params)
+        # redirect_to 
+    end
+
+    private 
+
+    def familiy_params
+        params.permit(:id, :cat_id, :dog_id)
     end
 end
