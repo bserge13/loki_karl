@@ -24,7 +24,8 @@ Rails.application.routes.draw do
   # dog_families
   get '/families/dogs/:dog_id', to: 'families#index', as: 'families_dogs'
 
-  # new_familes
+  # familes
   get '/families/new', to: 'families#new', as: 'new_families'
   post '/families', to: 'families#create', as: 'create_families'
+  get '/families', to: 'families#index', as: 'all_families'
 end

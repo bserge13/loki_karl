@@ -49,12 +49,12 @@ RSpec.describe 'Create Families', type: :feature do
             fill_in "Cat ID", with: "#{@bexley.id}"
             fill_in "Dog ID", with: "#{@loki.id}"
             click_button "Create"
+            expect(current_path).to eq(all_families_path)
 
             new_family = Family.last
 
             expect(new_family.cat_id).to eq(@bexley.id)
             expect(new_family.dog_id).to eq(@loki.id)
-            # creation actions passing, but need to lockdown where to redirect
         end
     end 
 end 

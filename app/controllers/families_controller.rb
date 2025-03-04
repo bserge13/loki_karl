@@ -15,9 +15,8 @@ class FamiliesController < ApplicationController
     end
 
     def create 
-        # require 'pry'; binding.pry
         Family.create(familiy_params)
-        # redirect_to 
+        redirect_to all_families_path
     end
 
     private 
