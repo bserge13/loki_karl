@@ -55,7 +55,10 @@ RSpec.describe 'Families Features', type: :feature do
         end
 
         it 'has an index page of all associations' do 
-            
+            visit all_families_path
+
+            # Controller main focus:
+            # Need to differentiate between cat fam index, dog fam index, and all fam index
         end
     end
 end
