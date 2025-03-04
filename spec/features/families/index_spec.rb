@@ -53,5 +53,9 @@ RSpec.describe 'Families Features', type: :feature do
 
             expect(current_path).to eq("/cats/#{@bexley.id}")
         end
+
+        it 'has an index page of all associations' do 
+            
+        end
     end
 end
