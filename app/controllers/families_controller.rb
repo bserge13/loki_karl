@@ -1,5 +1,6 @@
 class FamiliesController < ApplicationController
     def index 
+        # need to be able to sort between an id vs no id, and cat vs dog id
         if params[:dog_id] == nil
             @pet = Cat.find(params[:cat_id])
             @family = @pet.dogs
