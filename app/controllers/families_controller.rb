@@ -1,12 +1,16 @@
 class FamiliesController < ApplicationController
-    def index 
-        # need to be able to sort between an id vs no id, and cat vs dog id
-        if params[:dog_id] == nil
-            @pet = Cat.find(params[:cat_id])
-            @family = @pet.dogs
-        elsif params[:cat_id] == nil
-            @pet = Dog.find(params[:dog_id])
-            @family = @pet.cats
+    def index
+        # require 'pry'; binding.pry
+        if params[:cat_id] == nil && params[:dog_id] == nil
+            ...
+        else
+            if params[:dog_id] == nil
+                @pet = Cat.find(params[:cat_id])
+                @family = @pet.dogs
+            elsif params[:cat_id] == nil
+                @pet = Dog.find(params[:dog_id])
+                @family = @pet.cats
+            end
         end
     end
 
