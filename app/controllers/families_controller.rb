@@ -1,18 +1,16 @@
 class FamiliesController < ApplicationController
     def index
         # require 'pry'; binding.pry
-        if params[:cat_id] == nil && params[:dog_id] == nil
-            ...
-        else
-            if params[:dog_id] == nil
-                # Cat Index route
-                @pet = Cat.find(params[:cat_id])
-                @family = @pet.dogs
-            elsif params[:cat_id] == nil
-                # Dog Index route
-                @pet = Dog.find(params[:dog_id])
-                @family = @pet.cats
-            end
+        if params[:cat_id].nil? && params[:dog_id].nil?
+            @families = Family.all
+        elsif params[:dog_id].nil?
+            # Cat Index route
+            @pet = Cat.find(params[:cat_id])
+            @family = @pet.dogs
+        elsif params[:cat_id].nil?
+            # Dog Index route
+            @pet = Dog.find(params[:dog_id])
+            @family = @pet.cats
         end
     end
 

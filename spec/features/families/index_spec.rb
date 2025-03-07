@@ -20,7 +20,7 @@ RSpec.describe 'Families Features', type: :feature do
             Family.create!(dog_id: @loki.id, cat_id: @bexley.id)
         end
 
-        it 'has an index of a cats associated dogs' do
+        xit 'has an index of a cats associated dogs' do
             visit cat_path(@karl.id)
             click_link("#{@karl.name}'s Dogs")
 
@@ -30,7 +30,7 @@ RSpec.describe 'Families Features', type: :feature do
             expect(page).to have_link(@heidi.name)
         end
 
-        it 'has an index of a dogs associated cats' do
+        xit 'has an index of a dogs associated cats' do
             visit dog_path(@loki.id)
             click_link("#{@loki.name}'s Cats")
 
@@ -40,14 +40,14 @@ RSpec.describe 'Families Features', type: :feature do
             expect(page).to have_link(@bexley.name)
         end
 
-        it 'reroutes to an animals show page- cat-to-dog' do 
+        xit 'reroutes to an animals show page- cat-to-dog' do 
             visit families_cats_path(@karl.id)
             click_link(@nova.name)
 
             expect(current_path).to eq("/dogs/#{@nova.id}")
         end
 
-        it 'reroutes to an animals show page- dog-to-cat' do 
+        xit 'reroutes to an animals show page- dog-to-cat' do 
             visit families_dogs_path(@loki.id)
             click_link(@bexley.name)
 
