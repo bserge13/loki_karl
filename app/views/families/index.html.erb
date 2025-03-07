@@ -1,4 +1,8 @@
-<h1> <%= @pet.name %>'s Family </h1>
+<% if @pet.nil? %>
+    <h1> All Families </h1>
+<% else %>
+    <h1> <%= @pet.name %>'s Family </h1>
+<% end %>
 
 <% @family.each do |sibling| %>
     <% if sibling.class == Dog %>

@@ -2,7 +2,7 @@ class FamiliesController < ApplicationController
     def index
         # require 'pry'; binding.pry
         if params[:cat_id].nil? && params[:dog_id].nil?
-            @families = Family.all
+            @family = Family.all
         elsif params[:dog_id].nil?
             # Cat Index route
             @pet = Cat.find(params[:cat_id])
