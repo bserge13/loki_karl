@@ -5,9 +5,11 @@ class FamiliesController < ApplicationController
             ...
         else
             if params[:dog_id] == nil
+                # Cat Index route
                 @pet = Cat.find(params[:cat_id])
                 @family = @pet.dogs
             elsif params[:cat_id] == nil
+                # Dog Index route
                 @pet = Dog.find(params[:dog_id])
                 @family = @pet.cats
             end
