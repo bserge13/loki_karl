@@ -9,5 +9,7 @@
         <li> <%= link_to "#{sibling.name}", "/dogs/#{sibling.id}" %></li>
     <% elsif sibling.class == Cat %>
         <li> <%= link_to "#{sibling.name}", "/cats/#{sibling.id}" %></li>
+    <% else %>
+        <li> <%=link_to "", "/families/#{sibling.id}" %></li>
     <% end %>
 <% end %>
