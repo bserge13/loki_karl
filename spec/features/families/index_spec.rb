@@ -58,9 +58,10 @@ RSpec.describe 'Families Features', type: :feature do
             visit all_families_path
 
             expect(page).to have_content('All Families')
-            save_and_open_page
-            # Update controller for view page- Family.all is all just associations, not any objects
-            # Pivot to a families show page for associations? Maybe?
+            # save_and_open_page
+            # Pivot to a families show page for associations
+            # This configuration has the index page list links to joins table 
+            # show page which would have cat/dog association info
         end
     end
 end
