@@ -10,6 +10,6 @@
     <% elsif sibling.class == Cat %>
         <li> <%= link_to "#{sibling.name}", "/cats/#{sibling.id}" %></li>
     <% else %>
-        <li> <%=link_to "This association", family_path(sibling.id) %></li>
+        <li> <%= link_to "#{sibling.name}", family_path(sibling.id) %></li>
     <% end %>
 <% end %>
