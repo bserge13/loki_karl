@@ -6,6 +6,6 @@ class Family < ApplicationRecord
         # require 'pry'; binding.pry
         dog = Dog.find_by(id: self.dog_id)
         cat = Cat.find_by(id: self.cat_id)
-        return "#{dog} and #{cat}"
+        return "#{dog.name} and #{cat.name}"
     end
 end
