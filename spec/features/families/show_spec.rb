@@ -12,5 +12,12 @@ RSpec.describe 'Families Features', type: :feature do
             Family.create!(dog_id: @loki.id, cat_id: @cowboy.id)
             Family.create!(dog_id: @heidi.id, cat_id: @bexley.id)
         end
+
+        it 'has a show page to redirect to' do 
+            visit all_families_path
+
+            expect(page).to have_link("#{@loki.name} and #{@cowboy.name}")
+            expect(page).to have_link("#{@heidi.name} and #{@bexley.name}")
+        end
     end 
 end 
