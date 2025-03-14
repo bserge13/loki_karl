@@ -26,5 +26,11 @@ RSpec.describe 'Families Features', type: :feature do
 
             expect(current_path).to eq(family_path(@lc.id))
         end
+
+        it 'has a show page with association info' do 
+            visit(family_path(@lc.id))
+
+            expect(page).to have_content("#{@loki.name} and #{@cowboy.name} Show Page")
+        end
     end 
 end 
