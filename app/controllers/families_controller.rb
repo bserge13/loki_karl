@@ -24,6 +24,10 @@ class FamiliesController < ApplicationController
         redirect_to all_families_path
     end
 
+    def show 
+        @family = Family.find(params[:id])
+    end
+
     private 
 
     def familiy_params
