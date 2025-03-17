@@ -36,9 +36,9 @@ RSpec.describe 'Families Features', type: :feature do
             expect(page).to have_content(@loki.age)
             expect(page).to have_content(@loki.color)
             
-            # expect(page).to have_content(@cowboy.name)
-            # expect(page).to have_content(@cowboy.age)
-            # expect(page).to have_content(@cowboy.color)
+            expect(page).to have_content(@cowboy.name)
+            expect(page).to have_content(@cowboy.age)
+            expect(page).to have_content(@cowboy.color)
         end
     end 
 end 
