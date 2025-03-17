@@ -39,6 +39,8 @@ RSpec.describe 'Families Features', type: :feature do
             expect(page).to have_content(@cowboy.name)
             expect(page).to have_content(@cowboy.age)
             expect(page).to have_content(@cowboy.color)
+
+            # add partial to view pages for redirecting back to pages
         end
     end 
 end 
