@@ -26,6 +26,8 @@ class FamiliesController < ApplicationController
 
     def show 
         @family = Family.find(params[:id])
+        @cat = Cat.find_by(id: @family.cat_id)
+        @dog = Dog.find_by(id: @family.dog_id)
     end
 
     private 
