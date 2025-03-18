@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # landing page
-  get '/', to: 'welcome#index'
+  get '/', to: 'welcome#index', as: 'home'
 
   # dogs
   # get '/dogs', to: 'dogs#index'
