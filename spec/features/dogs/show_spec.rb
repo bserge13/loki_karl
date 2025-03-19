@@ -12,6 +12,10 @@ RSpec.describe 'Dogs Features', type: :feature do
             click_link(@loki.name)
             expect(current_path).to eq("/dogs/#{@loki.id}")
             expect(page).to have_content("Welcome to #{@loki.name}'s Show Page!")
+
+            expect(page).to have_link('To Home')
+            click_link('To Home')
+            expect(current_path).to eq(home_path)
         end
 
         it 'has a link to see cats associated with a dog' do
