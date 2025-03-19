@@ -1,5 +1,7 @@
 <h1>Welcome to <%=@cat.name%>'s Show Page!</h1>
 
+<p><%= render partial: 'app_partials/link_to_dash' %>
+
 <br> See our other four-legged sibblings
 <br><%=@cat.name%>'s Dogs
 <br><%= link_to "#{@cat.name}'s Dogs", "/families/cats/#{@cat.id}"%>
