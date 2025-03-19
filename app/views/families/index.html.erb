@@ -4,6 +4,8 @@
     <h1> <%= @pet.name %>'s Family </h1>
 <% end %>
 
+<p><%= render partial: 'app_partials/link_to_dash' %>
+
 <% @family.each do |sibling| %>
     <% if sibling.class == Dog %>
         <li> <%= link_to "#{sibling.name}", "/dogs/#{sibling.id}" %></li>

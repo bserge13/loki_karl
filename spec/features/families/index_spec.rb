@@ -64,6 +64,10 @@ RSpec.describe 'Families Features', type: :feature do
             expect(page).to have_link("#{@loki.name} and #{@karl.name}")
             expect(page).to have_link("#{@loki.name} and #{@cowboy.name}")
             expect(page).to have_link("#{@loki.name} and #{@bexley.name}")
+            
+            expect(page).to have_link('To Home')
+            click_link('To Home')
+            expect(current_path).to eq(home_path)
         end
     end
 end
