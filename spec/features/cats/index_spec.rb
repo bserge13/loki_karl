@@ -19,6 +19,10 @@ RSpec.describe 'Cats Features', type: :feature do
             expect(page).to have_link(@cowboy.name)
             click_link(@cowboy.name)
             expect(current_path).to eq("/cats/#{@cowboy.id}")
+
+            expect(page).to have_link('To Home')
+            click_link('To Home')
+            expect(current_path).to eq(home_path)
         end
 
         it 'lists the average age of all the cats listed' do

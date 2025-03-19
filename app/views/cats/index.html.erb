@@ -1,5 +1,7 @@
 <h1>Cats Page!</h1>
 
+<p><%= render partial: 'app_partials/link_to_dash' %>
+
 <% @cats.each do |cat| %>
     <p><section id=<%= "cats-#{cat.id}"%>>
         <li>Name: <%= link_to "#{cat.name}", "/cats/#{cat.id}" %></li>
