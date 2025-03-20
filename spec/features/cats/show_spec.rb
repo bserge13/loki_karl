@@ -24,6 +24,7 @@ RSpec.describe 'Cats Features', type: :feature do
             
             click_link("#{@karl.name}'s Dogs")
             expect(current_path).to eq("/families/cats/#{@karl.id}")
+            # just doing it for the streaks
         end
     end
 end
