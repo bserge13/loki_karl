@@ -31,7 +31,8 @@ class FamiliesController < ApplicationController
     end
 
     def destroy 
-        require 'pry'; binding.pry
+        Family.find_by(id: params[:id]).destroy
+        redirect_to all_families_path
     end
 
     private 
