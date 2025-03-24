@@ -13,10 +13,19 @@ RSpec.describe 'Families Features' do
             @hb = Family.create!(dog_id: @heidi.id, cat_id: @bexley.id)
         end
 
-        it 'destroys an association' do
+        it 'has a button to destroy an association' do
             visit(family_path(@lc.id))
 
             expect(page).to have_button('Delete Association')
+        end
+
+        it 'destroys an association' do
+            visit(family_path(@lc.id))
+
+            click_button('Delete Association')
+
+            expect(current_path).to eq(all_families_path)
+            expect(page).to_not have_link("#{@loki.name} and #{@cowboy.name}")
         end
     end
 end
