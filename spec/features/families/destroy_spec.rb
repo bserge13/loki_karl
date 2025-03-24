@@ -19,7 +19,7 @@ RSpec.describe 'Families Features', type: :feature do
             expect(page).to have_button('Delete Association')
         end
 
-        xit 'destroys an association' do
+        it 'destroys an association' do
             visit(family_path(@lc.id))
 
             click_button('Delete Association')
