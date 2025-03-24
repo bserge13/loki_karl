@@ -14,7 +14,9 @@ RSpec.describe 'Families Features' do
         end
 
         it 'destroys an association' do
-            
+            visit(family_path(@lc.id))
+
+            expect(page).to have_button('Delete Association')
         end
     end
 end
