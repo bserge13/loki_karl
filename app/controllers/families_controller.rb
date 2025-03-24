@@ -30,6 +30,10 @@ class FamiliesController < ApplicationController
         @dog = Dog.find_by(id: @family.dog_id)
     end
 
+    def destroy 
+        require 'pry'; binding.pry
+    end
+
     private 
 
     def familiy_params

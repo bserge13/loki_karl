@@ -29,5 +29,5 @@ Rails.application.routes.draw do
   post '/families', to: 'families#create', as: 'create_families'
   get '/families', to: 'families#index', as: 'all_families'
   get '/families/:id', to: 'families#show', as: 'family'
-  get 'families/:id', to: 'families#destroy'
+  get '/families/:id', to: 'families#destroy'
 end
